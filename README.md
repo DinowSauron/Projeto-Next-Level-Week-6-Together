@@ -2,11 +2,13 @@
  Evento realizado pela rocketseat na trilha React-JS.
  O projeto deste evento é o __Letmeask__
 
-<a href="https://github.com/DinowSauron/Projeto-Next-Level-Week-6-Together" align="center">
- <img 
- src="./letmeask/src/assets/images/logo.svg"
- width="50%"
- />
+<a href="https://github.com/DinowSauron/Projeto-Next-Level-Week-6-Together"></a>
+    <p  align="center">
+        <img 
+        src="./letmeask/src/assets/images/logo.svg"
+        width="50%"
+        />
+    </p>
 </a>
 
 <hr>
