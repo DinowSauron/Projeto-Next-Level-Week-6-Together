@@ -20,20 +20,23 @@
 
  O Projeto desta semana é o **Letmeask**!
 
- **Letmeask** é um aplicativo de perguntas e respostas, onde uma pessoa cria uma sala em tempo real e outras pessoas entram na sala e realizam suas perguntas para serem respondidas. Perfeito para gerencia de perguntas em massa durante eventos/live/shows/apresentações etc...
+ **Letmeask** é um aplicativo de perguntas e respostas, onde uma pessoa cria uma sala em tempo real e outras pessoas entram na sala e realizam suas perguntas para serem respondidas. Perfeito para gerenciamento de perguntas em massa durante eventos/live/shows/apresentações etc...
+
+ Acesse o projeto e teste agora mesmo [Clicando Aqui!](https://letmeask-dinowsauron.web.app/rooms/join/-Me1PHeOjUlALD-HB7zv)
 
 
 ## Fotos Da Aplicação:
 
-* Fotos em breve (fotos atuais apenas exemplos.)
+
 <a href="https://github.com/DinowSauron/Projeto-Next-Level-Week-6-Together" target="_blank">
+<img src="./pictures/landingpage.png" width="100%" alt="">
     <p style="display: flex; margin-top: 20px" >
-        <img src="https://user-images.githubusercontent.com/68889180/117478123-23949680-af35-11eb-8cb1-aec7eec5e1b1.png" width="49%" alt="">
-        <img src="https://user-images.githubusercontent.com/68889180/117478326-62c2e780-af35-11eb-903a-b1918ef62094.png" width="49%" alt="">
+        <img src="./pictures/1.png" width="49%" alt="">
+        <img src="./pictures/2.png" width="49%" alt="">
     </p>
     <p style="display: flex; margin-top: 20px">
-        <img src="https://user-images.githubusercontent.com/68889180/117478424-7ff7b600-af35-11eb-98f0-9f7fb7a0b3f5.png" width="49%" alt="">
-        <img src="https://user-images.githubusercontent.com/68889180/117478474-9271ef80-af35-11eb-8403-25d30f79b598.png" width="49%" alt="">
+        <img src="./pictures/3.png" width="49%" alt="">
+        <img src="./pictures/4.png" width="49%" alt="">
     </p>  
 </a>
 
@@ -42,13 +45,14 @@
 
 ## Tecnologias Utilizadas:
 
-* React 
+* React
 * Typescript
 * HTML
 * SASS
-* Firebase 
-    * Autenticação
-    * Banco de dados em tempo real
+* Firebase:
+    * Autenticação.
+    * Banco de dados em tempo real.
+    * Hosting.
 * SPA: Single Page Application
 
 
@@ -72,6 +76,19 @@
     ```
 * Utilize o comando ``yarn start`` para abrir o site.
 * Faça Login com uma conta do google para continuar.
+* Host no Firebase:
+    * ``yarn global add firebase-tools``
+    * ``firebase login``
+    * ``firebase init``
+        * Hosting.
+        * Realtime database.
+        * Selecione o projeto.
+            * What file should be used for Realtime Database Security Rules? ``database.rules.json``
+            * What do you want to use as your public directory? ``build``
+            * Configure as a single-page app (rewrite all urls to /index.html)? ``Yes``
+        * ``yarn build``
+        * ``firebase deploy``
+
 
 
 
@@ -80,40 +97,57 @@
 
 ## Notas Pessoais:
 
-<p>Neste nlw não tive muito tempo, pois ele conhecidiu com meus estudos para habilitação, porém não deixei de fazer o nlw.</p>
-<p>Bastante coisa precisou de alterações, principalkmente por erros comuns de formatação e alinhamentos, além de faltar ainda muita coisa a ser feita, já consegui resolver a maioria delas</p>
+Neste nlw não tive muito tempo, pois ele conhecidiu com meus estudos para habilitação, porém não deixei de fazer o nlw.
 
-Sei que é apenas um evento, nada de criar algo real, porém basta qualquer um ter a url de admin e ter uma conta logada(qualquer conta) pra se tornar um admin, qualquer um pode excluir qualquer pergunta, Não possuí nenhuma verificação antes de deletar a pergunta, porem possui verificação para dar like? mds...
+Bastante coisa precisou de alterações, principalmente por erros comuns de formatação e alinhamentos, além de faltar ainda muita coisa a ser feita, já consegui resolver a maioria delas
 
-Este é o trecho da parte de deletar a sala, nota alguma coisa faltando? alguma falta de verificação do ID do usuario que criou a sala por exemplo... (o de deletar pergutna tá igual)
-```tsx
-async function handleDeleteQuestion(questionId: string) {
-        if (window.confirm("Tem ceteza que deseja excluir esta pergunta?")) {
-            await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
-        }
-    }
-```
-* Para saber como Resolver o problema cronico de segurança [Clique Aqui](/Resolvendo-o-problema-de-segurança)
+Sei que é apenas um evento, nada de criar algo real, porém basta qualquer um ter a url de admin e ter uma conta logada(qualquer conta) pra se tornar um admin, qualquer um pode excluir qualquer pergunta, Não possuí nenhuma verificação antes de deletar a pergunta, porem possui verificação para dar like?
 
-<br>
-<p>Esta nlw não foi diferente, sempre com seus "erros" que até eu poderia resolver (e resolvo alguns)</p>
+Além do highlight não ser removivel, da pergunta respondida não virar a ultima pergunta, o admin não sabe os likes da pergunta então não sabe qual priorizar, os likes não possuem efeito nenhum, não há organização, como a pergunta com highlight ficar por cima, as respondidas por baixo e as com mais likes ficaram no topo etc...
+
+Não diria que o projeto está finalizado pelo fato de ainda estar faltando muita coisa, mais posso dizer que o evento foi concluído com sucesso!
+
+
+Esta nlw não foi diferente, sempre com seus "erros" que até eu poderia resolver (e resolvo alguns).
 
 ### NOTES:
 * www.api.github.com
 * https://console.firebase.google.com/
     * https://firebase.google.com/pricing
-* Spread operator JavaScript
-* React router dom
+* Spread operator JavaScript.
+* React router dom.
 * https://react-hot-toast.com
 * Database Serverless:
-    * AWS DynamoDB (NoQSL)
-    * FunaDB
-    * Supabase (Alternativo do Firebase)
+    * AWS DynamoDB. (NoQSL)
+    * FunaDB.
+    * Supabase. (Alternativo do Firebase)
 * React: algoritimo de reconciliação.
 * React Modal.
+* Host do firebase apenas paginas estaticas! (HTML, CSS, JS)
+* create react app deplyment / firebase.
+* Criação PWA (Aplicativo).
 
 - Para o projeto ser iniciado é necessário uma conta no firebase, logo depois uma configuração de um app web e as informaçoes precisam ser repassadas por um arquivo ``.env.local``  
 - Cláro, não é um projeto final, ainda faltam muitas coisas, como log-out, verificar se o usuario deseja ter seu login lembrado, etc...
+
+
+## Melhorias:
+
+* Verificação do usuario(administrador) ao remover, marcar, responder perguntas e encerrar a sala. (Implementado).
+* Administrador conseguir saber a pergunta mais votada.
+* Classificação dos comentários.
+* Remoção do highlight.
+* Impedir entrar na sala fechada pela url.
+* Remover pessoas da sala apos ela ser fechada.
+* Excluir a sala fechada do banco de dados.
+* Sistema de copiar o link da sala para o clipboard. (Implementado).
+* Ao Criar sala, já entrar como administrador. (Implementado).
+* Saber se tem alguém na sua sala, saber quantas pessoas logadas estão interagindo no app em sua sala.
+* Administrador visualizar os likes.
+* Sair da conta já logada.
+* Responsividade.
+* PWA
+* 
 
 ---
 
@@ -167,7 +201,7 @@ OBS: continue caso você fez o evento e não solucionou o problema, pois no meu 
 observe que no projeto original não há nenhum tipo de verificação se é o propietario da sala antes de deletar uma questo ou encerrar a sala.
 ```tsx
 async function handleDeleteQuestion(questionId: string) {
-        if (window.confirm("Tem ceteza que deseja excluir esta pergunta?")) {
+        if (window.confirm("Tem certeza que deseja excluir esta pergunta?")) {
             await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
         }
     }
@@ -191,7 +225,7 @@ roomRef.on("value", room => {
           content: value.content,
           author: value.author,
           authorId: value.authorId, // <-
-          isHighLighted: value.isHighLighted,
+          isHighlighted: value.isHighlighted,
           isAnswered: value.isAnswered,
           likeCount: Object.values(value.likes ?? {}).length,
           likeId: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0],
@@ -214,7 +248,7 @@ type FirebaseQuestions = Record<string, {
     authorId: string; // <-
     content: string;
     isAnswered: boolean;
-    isHighLighted: boolean;
+    isHighlighted: boolean;
     likes: Record<string, {
         authorId: string;
     }>;
@@ -244,7 +278,7 @@ No codigo:
  async function handleDeleteQuestion(questionId: string) {
 
         if( user?.id === authorId){ // <-
-            if (window.confirm("Tem ceteza que deseja excluir esta pergunta?")) {
+            if (window.confirm("Tem certeza que deseja excluir esta pergunta?")) {
                 await database.ref(`rooms/${roomId}/questions/${questionId}`).remove();
             }
         } else {
@@ -255,7 +289,7 @@ No codigo:
     async function handleEndRoom() {
 
         if( user?.id === authorId){ // <-
-            if (window.confirm("Tem ceteza que deseja encerrar a sessão?")) {
+            if (window.confirm("Tem certeza que deseja encerrar a sessão?")) {
                 database.ref(`rooms/${roomId}`).update({
                     endedAt: new Date(),
                 })
@@ -278,8 +312,6 @@ Agora, observe logar com outra conta e entrar no mesmo endereço Http do admin e
 Não sei o porque não foi abordado algo tão simples de ser feito, e tão necessáro, diz o diego (executor do projeto) que as regras do banco de dados impede esse tipo de comportamento, mais só na teoria, pois ele nem ousou a testar para ver que não funciona...
 
 Cláro que algo mais complexo pode ser feito, possívelmente poderiamos não deixar que o usuário entra-se na pagina e já redireciona ele pra pagina inicial ao ele tentar entrar como admin em uma sala que não seja sua...
-
-OBS: Estou na aula 4 de 5, o projeto ainda não está finalizado, porém ele não disse deste erro e nem disse que necessitaria de uma solução, pelo contrario, ele disse que se tenta-se não daria certo, porém da certo sim.
 
 ---
 
