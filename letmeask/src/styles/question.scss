@@ -1,0 +1,72 @@
+
+.question {
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    padding: 24px;
+
+    & + .question { //a partir da segunda em diante...
+        margin-top: 8px;
+    }
+
+    pre {
+        width: 100%;
+        line-break: strict;
+        white-space: pre-wrap; // preserva a formatação, porem mantem dentro do local.
+        color: #29292e;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+
+        .user-info {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 35px;
+                height: 35px;
+                border: 1px solid #29292e;
+                border-radius: 50%;
+            }
+
+            span {
+                margin-left: 8px;
+                color: #737380;
+                font-size: 15px;
+            }
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+
+            transition: filter 0.2s;
+
+            &.like-button {
+                display: flex;
+                align-items: flex-end;
+                color: #737380;
+                gap: 8px;
+                
+
+                &.liked {
+                    color: #835afd;
+
+                    svg path {
+                        stroke: #835afd;
+                        // bordas: stroke, preenchimento completo: fill
+                    }
+                }
+            }
+
+            &:hover {
+                filter: brightness(0.7);
+            }
+        }
+    }
+}

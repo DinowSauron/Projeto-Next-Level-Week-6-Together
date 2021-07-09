@@ -29,7 +29,7 @@ export function NewRoom() {
             authorId: user?.id,
         } )
 
-        history.push(`/rooms/join/${firebaseRoom.key}`);
+        history.push(`/rooms/admin/${firebaseRoom.key}`);
     }
 
 
