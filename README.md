@@ -45,9 +45,9 @@
 
 ## Tecnologias Utilizadas:
 
-* React
+* ReactJS
 * Typescript
-* HTML
+* HTML5
 * SASS
 * Firebase:
     * Autenticação.
@@ -119,7 +119,7 @@ Esta nlw não foi diferente, sempre com seus "erros" que até eu poderia resolve
 * https://react-hot-toast.com
 * Database Serverless:
     * AWS DynamoDB. (NoQSL)
-    * FunaDB.
+    * FaunaDB.
     * Supabase. (Alternativo do Firebase)
 * React: algoritimo de reconciliação.
 * React Modal.
