@@ -192,13 +192,11 @@ OBS: note que não é um tutorial de como executar a aplicação, isto são os c
 
 ## Resolvendo o problema de segurança:
 
-Como se sabe, o projeto possuí um problema grave de segurança, (bem pelo menos eu sei, já o diego, o realizador do evento não deve saber...)
-
 OBS: continue caso você fez o evento e não solucionou o problema, pois no meu repositório eu jamáis daria upload com uma falha dessas, ou seja, se você deu clone, já possuí a versão onde o problema foi solucionado.
 
 ---
 
-observe que no projeto original não há nenhum tipo de verificação se é o propietario da sala antes de deletar uma questo ou encerrar a sala.
+observe que no projeto original não há nenhum tipo de verificação se é o propietario da sala antes de deletar uma questão ou encerrar a sala.
 ```tsx
 async function handleDeleteQuestion(questionId: string) {
         if (window.confirm("Tem certeza que deseja excluir esta pergunta?")) {
@@ -210,7 +208,7 @@ async function handleDeleteQuestion(questionId: string) {
 Para resolver isso é facíl, basta verificar se o Id do usuário logado é o mesmo do usuário que criou a sala... 
 
 
-Então para resolver isto, crie uma variavel no useRoom.tsx:
+Então para resolver isso, crie uma variavel no useRoom.tsx:
 ``const [authorId, setAuthorId] = useState("");``
 
 Certifique de colocar o authorId no return do ``parsedQuestions`` e setar o seu estado:
