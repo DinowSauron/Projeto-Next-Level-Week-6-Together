@@ -22,7 +22,7 @@
 
  **Letmeask** é um aplicativo de perguntas e respostas, onde uma pessoa cria uma sala em tempo real e outras pessoas entram na sala e realizam suas perguntas para serem respondidas. Perfeito para gerenciamento de perguntas em massa durante eventos/live/shows/apresentações etc...
 
- Acesse o projeto e teste agora mesmo [Clicando Aqui!](https://letmeask-dinowsauron.web.app/rooms/join/-Me1PHeOjUlALD-HB7zv)
+ Acesse o projeto e teste agora mesmo [Clicando Aqui!](https://letmeask-dinowsauron.web.app) e cole este codigo de exemplo de sala: ``-Me1PHeOjUlALD-HB7zv``
 
 
 ## Fotos Da Aplicação:
